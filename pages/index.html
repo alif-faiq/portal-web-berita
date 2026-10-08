@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Berita terkini dan terpercaya dari berbagai kategori.">
+    <meta name="theme-color" content="#172033">
+    <title>Portal Berita - Informasi Terpercaya</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script>
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="top">
+    <div class="topbar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="inline-flex items-center gap-2">
+                <i class="bi bi-calendar3"></i>
+                <time id="current-date"></time>
+            </span>
+            <span class="inline-flex items-center gap-2">
+                <i class="bi bi-circle-fill text-danger" style="font-size:0.5rem"></i>
+                Berita Terkini &amp; Terpercaya
+            </span>
+        </div>
+    </div>
+
+    <header class="masthead">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="#/kategori/terbaru" class="masthead-logo inline-flex items-center gap-3" aria-label="PortalBerita - Terbaru">
+                <span class="masthead-mark"><i class="bi bi-newspaper"></i></span>
+                <span class="masthead-wordmark">Portal<span>Berita</span></span>
+            </a>
+            <div class="text-end">
+                <div class="masthead-tagline">Informasi terpercaya</div>
+                <div class="masthead-tagline">Setiap hari, untuk semua</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="cat-nav" aria-label="Kategori berita">
+        <div class="container" id="category-nav"></div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <div class="page-heading">
+                <div>
+                    <p class="page-eyebrow inline-flex items-center gap-2">
+                        <span class="page-eyebrow__line"></span> KABAR TERKINI
+                    </p>
+                    <h1 id="category-title">Terbaru</h1>
+                    <p class="page-intro">Ikuti kabar terbaru dan pilihan redaksi hari ini.</p>
+                </div>
+                <span class="article-count inline-flex items-center gap-2" id="article-count">
+                    <i class="bi bi-newspaper"></i>
+                    Memuat berita...
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <main class="news-main py-5">
+        <div class="container">
+            <div class="row g-4" id="news-grid" aria-live="polite" aria-busy="true">
+                <div class="col-12">
+                    <p class="loading-message"><span class="spinner-border spinner-border-sm me-2" role="status"></span>Memuat berita terbaru...</p>
+                </div>
+            </div>
+            <div class="text-center mt-5 pt-3 border-top">
+                <a href="#top" class="back-top"><i class="bi bi-arrow-up-circle me-1"></i>Kembali ke Atas</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-lg-4">
+                    <a href="#/kategori/terbaru" class="footer-logo">Portal<span>Berita</span></a>
+                    <p class="footer-desc">Sumber informasi terpercaya untuk berita nasional, internasional, ekonomi, olahraga, teknologi, dan gaya hidup terkini.</p>
+                </div>
+                <div class="col-6 col-lg-2 offset-lg-1">
+                    <h2 class="footer-heading">Kategori</h2>
+                    <ul class="footer-links" id="footer-category-links"></ul>
+                </div>
+                <div class="col-lg-3">
+                    <h2 class="footer-heading">Tentang Kami</h2>
+                    <p class="footer-desc">Portal berita yang menyajikan kabar terkini dari berbagai kategori.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-floating-bar">
+            <div class="container">
+                <span>&copy; <span id="current-year"></span> PortalBerita. Seluruh hak cipta dilindungi.</span>
+                <a href="#top"><i class="bi bi-arrow-up-circle me-1"></i>Kembali ke Atas</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

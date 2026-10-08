@@ -1,5 +1,18 @@
 # CodeIgniter 4 Application Starter
 
+## GitHub Pages
+
+This repository deploys a static version of the news portal to GitHub Pages. The static frontend is in `pages/`; it uses the shared stylesheet at `public/css/style.css`. GitHub Actions fetches a snapshot from the Berita Indo API and packages it with the site, avoiding browser cross-origin (CORS) restrictions. Category URLs are handled with hash routes so they work under the repository subpath. The workflow refreshes the news every six hours and on each push to `main`.
+
+To enable deployment:
+
+1. Push the repository to GitHub.
+2. Open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
+3. Push to the `main` branch or run the **Deploy static site to GitHub Pages** workflow manually.
+4. After the workflow succeeds, the site is available at `https://alif-faiq.github.io/portal-web-berita/`.
+
+GitHub Pages only hosts static files and does not run PHP. The original CodeIgniter application remains in the repository, but it needs a PHP-capable host to run as a server-side application. On Pages, news loading also depends on the external API and the visitor's network connection.
+
 ## What is CodeIgniter?
 
 CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.

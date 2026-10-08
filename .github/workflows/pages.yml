@@ -1,0 +1,55 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */6 * * *"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Assemble static site
+        run: |
+          mkdir -p _site/css
+          cp pages/index.html pages/app.js _site/
+          cp public/css/style.css _site/css/style.css
+          node pages/build-data.mjs _site/data
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

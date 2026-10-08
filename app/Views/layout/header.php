@@ -10,13 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Tailwind utilities (Bootstrap remains responsible for the grid and components) -->
     <script>
-        window.tailwind = {
-            config: {
-                corePlugins: {
-                    preflight: false
-                }
-            }
-        };
+        window.tailwind = window.tailwind || {};
+        window.tailwind.config = { corePlugins: { preflight: false } };
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Bootstrap Icons -->
