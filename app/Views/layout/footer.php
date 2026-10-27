@@ -11,10 +11,10 @@
                     ekonomi, olahraga, teknologi, dan gaya hidup terkini.
                 </p>
                 <div class="footer-socials">
-                    <a href="#"><i class="bi bi-twitter-x"></i></a>
-                    <a href="#"><i class="bi bi-instagram"></i></a>
-                    <a href="#"><i class="bi bi-facebook"></i></a>
-                    <a href="#"><i class="bi bi-youtube"></i></a>
+                    <a href="https://github.com/alif-faiq" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://www.linkedin.com/in/muhammad-alif-faiq-973410223/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.instagram.com/alwww976/" target="_blank"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100064868744172" target="_blank"><i class="bi bi-facebook"></i></a>
                 </div>
             </div>
 
@@ -46,16 +46,16 @@
                     <li><a href="#">Redaksi</a></li>
                     <li><a href="#">Pedoman Media</a></li>
                     <li><a href="#">Kebijakan Privasi</a></li>
-                    <li><a href="#">Hubungi Kami</a></li>
+                    <li><a href="https://www.linkedin.com/in/muhammad-alif-faiq-973410223/">Hubungi Kami</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    <br>
     <!-- Floating Footer Bar -->
-    <div class="footer-floating-bar">
+    <div class="">
         <div class="container">
             <span>&copy; <?= date('Y') ?> PortalBerita. Seluruh hak cipta dilindungi.</span>
-            <a href="#"><i class="bi bi-arrow-up-circle me-1"></i>Kembali ke Atas</a>
         </div>
     </div>
 </footer>
