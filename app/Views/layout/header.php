@@ -57,12 +57,12 @@
     <nav class="cat-nav">
         <div class="container">
             <a href="<?= site_url('kategori/terbaru') ?>" class="<?= ($kategori ?? '') === 'terbaru' ? 'active' : '' ?>"><i class="bi bi-house-fill me-1"></i>Terbaru</a>
-            <a href="<?= site_url('kategori/nasional') ?>" class="<?= ($kategori ?? '') === 'nasional' ? 'active' : '' ?>">Nasional</a>
-            <a href="<?= site_url('kategori/internasional') ?>" class="<?= ($kategori ?? '') === 'internasional' ? 'active' : '' ?>">Internasional</a>
-            <a href="<?= site_url('kategori/ekonomi') ?>" class="<?= ($kategori ?? '') === 'ekonomi' ? 'active' : '' ?>">Ekonomi</a>
-            <a href="<?= site_url('kategori/olahraga') ?>" class="<?= ($kategori ?? '') === 'olahraga' ? 'active' : '' ?>">Olahraga</a>
-            <a href="<?= site_url('kategori/teknologi') ?>" class="<?= ($kategori ?? '') === 'teknologi' ? 'active' : '' ?>">Teknologi</a>
-            <a href="<?= site_url('kategori/hiburan') ?>" class="<?= ($kategori ?? '') === 'hiburan' ? 'active' : '' ?>">Hiburan</a>
-            <a href="<?= site_url('kategori/gaya-hidup') ?>" class="<?= ($kategori ?? '') === 'gaya-hidup' ? 'active' : '' ?>">Gaya Hidup</a>
+            <a href="<?= site_url('kategori/nasional') ?>" class="<?= ($kategori ?? '') === 'nasional' ? 'active' : '' ?>"><i class="bi bi-flag-fill me-1"></i>Nasional</a>
+            <a href="<?= site_url('kategori/internasional') ?>" class="<?= ($kategori ?? '') === 'internasional' ? 'active' : '' ?>"><i class="bi bi-globe2 me-1"></i>Internasional</a>
+            <a href="<?= site_url('kategori/ekonomi') ?>" class="<?= ($kategori ?? '') === 'ekonomi' ? 'active' : '' ?>"><i class="bi bi-currency-dollar me-1"></i>Ekonomi</a>
+            <a href="<?= site_url('kategori/olahraga') ?>" class="<?= ($kategori ?? '') === 'olahraga' ? 'active' : '' ?>"><i class="bi bi-trophy-fill me-1"></i>Olahraga</a>
+            <a href="<?= site_url('kategori/teknologi') ?>" class="<?= ($kategori ?? '') === 'teknologi' ? 'active' : '' ?>"><i class="bi bi-cpu-fill me-1"></i>Teknologi</a>
+            <a href="<?= site_url('kategori/hiburan') ?>" class="<?= ($kategori ?? '') === 'hiburan' ? 'active' : '' ?>"><i class="bi bi-film me-1"></i>Hiburan</a>
+            <a href="<?= site_url('kategori/gaya-hidup') ?>" class="<?= ($kategori ?? '') === 'gaya-hidup' ? 'active' : '' ?>"><i class="bi bi-heart-pulse-fill me-1"></i>Gaya Hidup</a>
         </div>
     </nav>
